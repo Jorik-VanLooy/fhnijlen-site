@@ -47,42 +47,16 @@ foreach($xml->children() as $wedstrijd) { 
   $postponed = $wedstrijd->postponed;
 
   if ($sporthal == "Nijlen Sporthal 't Zand") {
-
   $sporthal = substr_replace($sporthal,"'", 16, 0);
-
-}
-
-elseif ($sporthal == "Berchem Sporthal 't Rooi 2")
-
-{
-
-$sporthal = substr_replace($sporthal,"'", 17, 0);
-
-}
-
-elseif ($sporthal == "Beerse Sporthal 't Beerke")
-
-{
-
-$sporthal = substr_replace($sporthal,"'", 16, 0);
-
-}
-
-elseif ($sporthal == "Berlaar Sporthal 't Stapveld")
-
-{
-
-$sporthal = substr_replace($sporthal,"'", 17, 0);
-
-}
-
-elseif ($sporthal == "Herenthout 't Kapelleke")
-
-{
-
-$sporthal = substr_replace($sporthal,"'", 12, 0);
-
-}
+  } elseif ($sporthal == "Berchem Sporthal 't Rooi 2") {
+    $sporthal = substr_replace($sporthal,"'", 17, 0);
+  } elseif ($sporthal == "Beerse Sporthal 't Beerke") {
+    $sporthal = substr_replace($sporthal,"'", 16, 0);
+  } elseif ($sporthal == "Berlaar Sporthal 't Stapveld"){
+    $sporthal = substr_replace($sporthal,"'", 17, 0);
+  } elseif ($sporthal == "Herenthout 't Kapelleke"){
+      $sporthal = substr_replace($sporthal,"'", 12, 0);
+  }
 
 $datum = str_replace("/", "-", $datum);
 
