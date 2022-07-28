@@ -3,11 +3,8 @@
 <?php
 
 $dbhost = "host";
-
 $dbuser = "user";
-
 $dbpass = "passwoord";
-
 $db = "db";
 
 $conn = new mysqli($dbhost, $dbuser, $dbpass,$db);
