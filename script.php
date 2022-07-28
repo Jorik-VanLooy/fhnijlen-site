@@ -2,13 +2,13 @@
 
 <?php
 
-$dbhost = "host";
+$dbhost = "fhnijlen.be.mysql";
 
-$dbuser = "user";
+$dbuser = "fhnijlen_be";
 
-$dbpass = "passwoord";
+$dbpass = "1kMI7xaI0C";
 
-$db = "db";
+$db = "fhnijlen_be";
 
 $conn = new mysqli($dbhost, $dbuser, $dbpass,$db);
 
@@ -91,12 +91,28 @@ $date = date('Y-m-d H:i', $timestamp);
 if (strpos($bezoekersploeg_id, 'winnaar') !== false) {
     echo 'true';
 }
-  $sql = "INSERT INTO JORIKTEST (nr, datum, aanvangsuur, reeks, reeksid, thuisploeg, bezoekersploeg, sporthal, thuisploeg_id, bezoekersploeg_id, stamnummer_thuisclub, stamnummer_bezoekersclub, ForfaitHoofd, uitslag_set_1, uitslag_set_2, uitslag_set_3, uitslag_set_4, uitslag_set_5, uitslagReserven, UitslagRes_set_1, UitslagRes_set_2, UitslagRes_set_3, postponed) VALUES ('$nr', '$date', '$aanvangsuur', '$reeks', '$reeksid', '$thuisploeg', '$bezoekersploeg', '$sporthal', '$thuisploeg_id', '$bezoekersploeg_id', '$stamnummer_thuisclub', '$stamnummer_bezoekersclub', '$ForfaitHoofd', '$uitslag_set_1', '$uitslag_set_2', '$uitslag_set_3', '$uitslag_set_4', '$uitslag_set_5', '$uitslagReserven', '$UitslagRes_set_1', '$UitslagRes_set_2', '$UitslagRes_set_3', '$postponed')";
+$sqlSelect = "SELECT * FROM JORIKTEST WHERE nr = '$nr'";
 
-if ($conn->query($sql) === TRUE) {
-  echo "New record created successfully";
+$result = mysqli_query($conn, $sqlSelect);
+
+if (mysqli_num_rows(mysqli_query($conn, $sqlSelect)) > 0) {
+    $sqlUpdate = "UPDATE JORIKTEST SET  datum = '$date', aanvangsuur = '$aanvangsuur', reeks = '$reeks', reeksid = '$reeksid', thuisploeg = '$thuisploeg', bezoekersploeg = '$bezoekersploeg', sporthal = '$sporthal', thuisploeg_id = '$thuisploeg_id', bezoekersploeg_id = '$bezoekersploeg_id',                  stamnummer_thuisclub = '$stamnummer_thuisclub', stamnummer_bezoekersclub = '$stamnummer_bezoekersclub', ForfaitHoofd = '$ForfaitHoofd', uitslag_set_1 = '$uitslag_set_1', uitslag_set_2 = '$uitslag_set_2', uitslag_set_3 = '$uitslag_set_3', uitslag_set_4 = '$uitslag_set_4', uitslag_set_5 = '$uitslag_set_5', uitslagReserven = '$uitslagReserven',     UitslagRes_set_1 = '$UitslagRes_set_1', UitslagRes_set_2 = '$UitslagRes_set_2', UitslagRes_set_3 = '$UitslagRes_set_2', postponed = '$postponed' WHERE nr='$nr'";
+
+    if ($conn->query($sqlUpdate) === TRUE) {
+          echo "record" . $nr . " succesfully updated" . "</br>";
+        } else {
+          echo "Error: " . $sqlUpdate . "<br>" . $conn->error . "</br>";
+        }
 } else {
-  echo "Error: " . $sql . "<br>" . $conn->error . "</br>";
+
+    $sqlInsert = "INSERT INTO JORIKTEST (nr, datum, aanvangsuur, reeks, reeksid, thuisploeg, bezoekersploeg, sporthal, thuisploeg_id, bezoekersploeg_id,                  stamnummer_thuisclub, stamnummer_bezoekersclub, ForfaitHoofd, uitslag_set_1, uitslag_set_2, uitslag_set_3, uitslag_set_4, uitslag_set_5, uitslagReserven,     UitslagRes_set_1, UitslagRes_set_2, UitslagRes_set_3, postponed) VALUES ('$nr', '$date', '$aanvangsuur', '$reeks', '$reeksid', '$thuisploeg', '$bezoekersploeg',     '$sporthal', '$thuisploeg_id', '$bezoekersploeg_id', '$stamnummer_thuisclub', '$stamnummer_bezoekersclub', '$ForfaitHoofd', '$uitslag_set_1', '$uitslag_set_2',     '$uitslag_set_3', '$uitslag_set_4', '$uitslag_set_5', '$uitslagReserven', '$UitslagRes_set_1', '$UitslagRes_set_2', '$UitslagRes_set_3', '$postponed')";
+
+    if ($conn->query($sqlInsert) === TRUE) {
+      echo "New record" . $nr . " created successfully" . "</br>";
+    } else {
+      echo "Error: " . $sqlInsert . "<br>" . $conn->error . "</br>";
+    }
+
 }
 }
 
