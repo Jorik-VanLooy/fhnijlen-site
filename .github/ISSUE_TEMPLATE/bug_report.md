@@ -8,30 +8,28 @@ assignees: ''
 ---
 
 **Beschrijf wat er fout gaat**
-A clear and concise description of what the bug is.
+BECHRIJF HIER
 
 **Wat zijn de stappen om het fout te doen lopen**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+STAPPEN INDIEN NODIG
 
 **Wat moet er gebeuren?**
-A clear and concise description of what you expected to happen.
+WAT MOET ER ANDERS
 
 **Op welke pagina gebeurt het?**
-If applicable, add screenshots to help explain your problem.
+PAGINA INDIEN NODIG
 
 **Welke Browser wordt er gebruikt**
+aanvinken nadat je de bug report hebt aangemaakt
 - [ ] chrome
 - [ ] edge
 - [ ] safari
 - [ ] firefox
 
 **Desktop of gsm?**
+idem dito
 - [ ] Desktop
 - [ ] gsm
 
 **Additional context**
-Add any other context about the problem here.
+EXTRA INFO
