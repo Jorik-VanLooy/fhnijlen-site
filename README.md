@@ -8,3 +8,4 @@
 
 ## Logo's
 In het design voorbeeld van joomla gaan de logo's er raar uitzien. HIERVAN AF BLIJVEN. op de echte site zit het wel goed. verander uw tekst gewoon beneden.
+dat wil zeggen, enkel aanpassen onder nieuwtjes.
