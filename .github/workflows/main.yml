@@ -7,8 +7,8 @@ on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   schedule:
     - cron:  '0 10 * * 1-5'
-    - cron:  '30 */1 * * 6'
-    - cron:  '30 */1 * * 0'
+    - cron:  '*/30 * * * 6'
+    - cron:  '*/30 * * * 0'
 
 
   # Allows you to run this workflow manually from the Actions tab
