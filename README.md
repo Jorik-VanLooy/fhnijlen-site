@@ -12,6 +12,8 @@ dat wil zeggen, enkel aanpassen onder nieuwtjes.
 ### Moest het toch verdwijnen
 voeg dit toe aan de startpagina leeg in het tabblad "source"
 
+![code startpagina](https://github.com/jorik-van-looy/fhnijlen-site/blob/main/images/Screenshot%202022-11-01%20at%2016.34.11.png)
+
 ```
 <h3>Volg Ons!</h3>
 
