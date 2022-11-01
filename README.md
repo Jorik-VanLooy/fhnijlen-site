@@ -9,3 +9,12 @@
 ## Logo's
 In het design voorbeeld van joomla gaan de logo's er raar uitzien. HIERVAN AF BLIJVEN. op de echte site zit het wel goed. verander uw tekst gewoon beneden.
 dat wil zeggen, enkel aanpassen onder nieuwtjes.
+
+```
+<h3>Volg Ons!</h3>
+
+<p>
+<a href="https://www.trooper.be/fhnijlen"><img alt="" src="images/trooper-logo.png" style="box-shadow: grey 0px 6px 8px 0px; margin-left: 5px; width: 75px; height: 75px; border-radius: 100%;float: left" /></a>
+<a href="https://www.facebook.be/fhnijlen"><img alt="" src="images/instagram-logo.png" style="box-shadow: grey 0px 6px 8px 0px; margin-left: 5px; width: 75px; height: 75px; border-radius: 100%;float: left" /></a> 
+<a href="https://www.instagram.be/fhnijlen"><img alt="" src="images/facebook-logo.png" style="box-shadow: grey 0px 6px 8px 0px; margin-left: 5px; width: 75px; height: 75px; border-radius: 100%;float: left" /></a></p>
+```
